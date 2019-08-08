@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from InstaJZ.views import HelloWorld, PostListView
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('instaJZ/', include('InstaJZ.urls')),
+    path('', HelloWorld.as_view(), name='helloworld'),
+    path('posts/', PostListView.as_view(), name='posts'),
 ]
