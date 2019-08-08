@@ -1,0 +1,7 @@
+<span> {{ object.title }} </span>
+
+<div>
+    <img src="/{{ object.image }}">
+    <a href="{% url 'editpost' object.pk %}">Edit Post</a>
+    <a href="{% url 'deletepost' object.pk %}">Delete Post</a>
+</div>

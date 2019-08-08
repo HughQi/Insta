@@ -1,7 +1,15 @@
+<header>
+    <div>
+        <a href="{% url 'makepost' %}">Make Post</a>
+    </div>
+</header>
+
 <div>
 
     {% for post in object_list%}
-        <img src="/{{ post.image }}">
+        <a href="{% url 'postdetail' post.pk%}">
+            <img src="/{{ post.image }}">
+        </a>
     {% endfor %}
 
 </div>
