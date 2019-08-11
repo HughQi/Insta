@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <span> {{ object.title }} </span>
 
 <div>
@@ -5,3 +9,5 @@
     <a href="{% url 'editpost' object.pk %}">Edit Post</a>
     <a href="{% url 'deletepost' object.pk %}">Delete Post</a>
 </div>
+
+{% endblock content %}
